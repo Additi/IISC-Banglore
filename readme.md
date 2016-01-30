@@ -1,0 +1,1 @@
+This dashboard contains different department's reaserch paper, patents and projects of IISC- Banglore. It is creatd using javascript, D3 library , CSS and Bootstrap. Just click on to index.html to see the dashboard.
