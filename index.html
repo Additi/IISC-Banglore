@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard 1 : IISC Bangalore  </title>
+  <link rel="stylesheet"type="text/css"href="./assets/lib/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet"type="text/css"href="./assets/css/keen-dashboards.css"/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+    <!-- D3.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"charset="utf-8"></script>
+    
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 11px;
+        font-weight: 300;
+        fill: #242424;
+        text-align: center;
+        text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+        cursor: default;
+      }
+      
+      .legend {
+        font-family: 'Raleway', sans-serif;
+        fill: #333333;
+      }
+      
+      .tooltip {
+        fill: #333333;
+      }
+    </style>
+</head>
+<body class="application">
+
+  <div class="navbar navbar-inverse navbar-fixed-top"role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <!-- <button type="button"class="navbar-toggle"data-toggle="collapse"data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand"href="../">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a> -->
+        <a class="navbar-brand"href="./">Indian Institute of Science: Analysis of Papers, Patents and Projects</a>
+      </div>
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <!-- <li><a href="https://keen.io">Home</a></li>
+          <li><a href="https://keen.io/team">Team</a></li>
+          <li><a href="https://github.com/keenlabs/dashboards/tree/gh-pages/layouts/split-rows">Source</a></li>
+          <li><a href="https://groups.google.com/forum/#!forum/keen-io-devs">Community</a></li><li><a href="http://stackoverflow.com/questions/tagged/keen-io?sort=newest&pageSize=15">Technical Support</a></li> -->
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <!-- <div class="chart-title">
+            Cell Title
+          </div> -->
+          <div class="chart-stage">
+          <div class="r1"></div>
+              <!-- <img data-src="holder.js/100%x120/white"> -->
+          </div>
+          <!-- <div class="chart-notes">
+            Notes about this chart
+          </div> -->
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Bio Chemistry 
+          </div>
+        <!--  <div class="chart-stage">
+              <img data-src="holder.js/100%x120/white">
+          </div> -->
+          <div class="chart-notes">
+             The Department of Biochemistry at the Indian Institute of Science, Bangalore started in 1921. It has remained in the forefront
+			 of biochemical research in the country. It has deservedly received recognition at various stages of its growth. The department was recognized as a Centre of Advanced study in Biochemistry in 1968 by the University Grants Commission. This Department has continuously provided 
+			 the nucleus that has led to the establishment of new centres of focused research within the Institute, and also research institutions elsewhere such as the Lac Research Institute (Ranchi), 
+			 Central Food Technological Research Institute (Mysore) and ASTRA Research Centre (Bangalore).
+			  <br><br><br><br><br> <br> <br> <br> <br>
+			  <p align="right">
+			  Yellow line represents papers <br> <br>
+			  Blue line represents patents  <br> <br>
+			  Red line represents projects <br> <br>
+			  </p>
+			  <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <!-- <div class="chart-title">
+            Cell Title
+          </div> -->
+          <div class="chart-stage">
+              <div class="r2"></div><!-- <img data-src="holder.js/100%x120/white"> -->
+          </div>
+          <!-- <div class="chart-notes">
+            Notes about this chart
+          </div> -->
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Inorganic and physical chemistry
+          </div>
+      <!--    <div class="chart-stage">
+              <img data-src="holder.js/100%x120/white">
+          </div>   -->
+          <div class="chart-notes">
+		  <p>
+           The Inorganic and Physical Chemistry (IPC) department is one of the most prestigious departments at the Indian Institute of Science and is devoted to advanced research and teaching in chemistry. Since its inception in 1909, the department has distinguished
+		   itself as a Centre for innovative and pioneering research in a wide range of areas in inorganic and physical chemistry. It was elevated to the status of a UGC Centre of Advanced Study in 1980 in recognition to its achievements in these fields and recently to the status of DST-FIST Sponsored Department. The major research efforts are focussed on such areas as molecular structure and dynamics, laser spectroscopy, organometallic and coordination chemistry,
+		   bioinorganic and biomimetic chemistry, energy systems, catalysis, polymers and electrochemistry.
+          </p>
+		  <br><br><br><br><br> <br> <br> <br> <br>
+			  <p align="right">
+			  Yellow line represents papers <br> <br>
+			  Blue line represents patents  <br> <br>
+			  Red line represents projects <br> <br>
+			  </p>
+			  <br><br><br>
+		  </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+ <!--          <div class="chart-title">
+            Cell Title
+          </div> -->
+          <div class="chart-stage">
+             <div class="r3"></div> <!-- <img data-src="holder.js/100%x120/white"> -->
+          </div>
+<!--           <div class="chart-notes">
+            Notes about this chart
+          </div> -->
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            AeroSpace Engineering
+          </div>
+       <!--   <div class="chart-stage">
+              <img data-src="holder.js/100%x120/white">
+          </div> -->
+          <div class="chart-notes">
+          The department of Aeronautical Engineering was started in December 1942. Thus, after the department of Electrical Technology, 
+		  the Department of Aeronautical Engineering is the oldest engineering department at the Institute. The services of Dr. V.M. Ghatage, one of the few trained aeronautical engineers in the country at that time and who was working in HAL, were lent to the Institute during 1942-1947. He was the head of the department till 1945. During 1945-48, Dr. R.G. Harris of the Royal Aircraft Establishment U.K. was professor and Head of the Department. Prof. O.G. Tietjens was appointed as the Head of the department in 1949 and continued till 1954. After 1955, induction of foreigners to head, 
+		  the department was discontinued and one of the professors acted as Head or Chairman of the department.
+          
+		  <br><br><br><br><br> <br> <br> <br> <br>
+			  <p align="right">
+			  Yellow line represents papers <br> <br>
+			  Blue line represents patents  <br> <br>
+			  Red line represents projects <br> <br>
+			  </p>
+			  <br><br><br>
+			</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <!-- <div class="chart-title">
+            Cell Title
+          </div> -->
+          <div class="chart-stage">
+             <div class="r4"></div> <!-- <img data-src="holder.js/100%x120/white"> -->
+          </div>
+ <!--          <div class="chart-notes">
+            Notes about this chart
+          </div> -->
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+           Cells and offices
+          </div>
+       <!--   <div class="chart-stage">
+              <img data-src="holder.js/100%x120/white">
+          </div> -->
+          <div class="chart-notes">
+           In the recent years, with new centres such as CiSTUP (The Centre of Infrastructure, Sustainable Transportation, and Urban Planning), the Divecha Centre for Climate Change, the Centre for Earth Sciences, the Centre for NeuroScience, the Centre for Excellence in Nano Science and Engineering (CeNSE), and the Robert Bosch Centre for Cyber Physical Systems (RBCCPS), the Institute has vigorously promoted inter-disciplinary research. Indeed, CiSTUP, RBCCPS and a new Centre for Brain Research (funded by a large private endowment) are expected to conduct
+		   translational research in their respective areas, in order to better connect with industry and society. 
+		      
+         
+		  <br><br><br><br><br> <br> <br> <br> <br>
+			  <p align="right">
+			  Yellow line represents papers <br> <br>
+			  Blue line represents patents  <br> <br>
+			  Red line represents projects <br> <br>
+			  </p>
+			  <br><br><br>
+		   </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <!-- <div class="chart-title">
+            Cell Title
+          </div> -->
+          <div class="chart-stage">
+              <div class="r5"></div><!-- <img data-src="holder.js/100%x120/white"> -->
+          </div>
+ <!--          <div class="chart-notes">
+            Notes about this chart
+          </div> -->
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Research Centres 
+          </div>
+     <!--     <div class="chart-stage">
+              <img data-src="holder.js/100%x120/white">
+          </div>  -->
+          <div class="chart-notes">
+
+The Centre for Nano Science and Engineering (CeNSE) was established in 2010 to pursue interdisciplinary research across several disciplines with a focus on nanoscale systems. Current research topics include, but are not limited to nanoelectronics, MEMS/NEMS, nanomaterials and devices, photonics, nano-biotechnology, solar cells and computational nano-engineering. Apart from the regular faculty members at CeNSE, almost 40 faculty members from different departments at IISc are associated in the academic and research activities at the centre. The centre offers PhD programs in a wide range of areas, and has close interactions with the industry. A state-of-the art nanofabrication facility with a clean room spanning 1400 square meters is located at the centre. In addition, there are several characterization 
+labs that cater to material, electronic, mechanical, chemical and optical characterization.
+
+          
+		  <br><br><br><br><br> <br> <br> <br> <br>
+			  <p align="right">
+			  Yellow line represents papers <br> <br>
+			  Blue line represents patents  <br> <br>
+			  Red line represents projects <br> <br>
+			  </p>
+			  <br><br><br>
+			</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <!-- <div class="chart-title">
+            Cell Title
+          </div> -->
+          <div class="chart-stage">
+              <div class="r6"></div><!-- <img data-src="holder.js/100%x120/white"> -->
+          </div>
+ <!--          <div class="chart-notes">
+            Notes about this chart
+          </div> -->
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+            Electrical Engineering 
+          </div>
+         <!-- <div class="chart-stage">
+              <img data-src="holder.js/100%x120/white">
+          </div> -->
+          <div class="chart-notes">
+		  The department of Electrical Engineering at Indian Institute of Science offers a vibrant environment for postgraduate education and research in Electrical Engineering. Established in 1911, it is one of the first few departments at IISc. The vision of the department is to provide the leadership to enable India's excellence in the field of Electrical Engineering. The department is committed to advancement of the frontiers of knowledge in 
+Electrical Engineering and to provide the students with a stimulating and rewarding learning experience. 
+            <br><br><br><br><br> <br> <br> <br> <br>
+			  <p align="right">
+			  Yellow line represents papers <br> <br>
+			  Blue line represents patents  <br> <br>
+			  Red line represents projects <br> <br>
+			  </p>
+			  <br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="chart-wrapper">
+          <!-- <div class="chart-title">
+            Cell Title
+          </div> -->
+          <div class="chart-stage">
+              <div class="r7"></div><!-- <img data-src="holder.js/100%x120/white"> -->
+          </div>
+ <!--          <div class="chart-notes">
+            Notes about this chart
+          </div> -->
+        </div>
+      </div>
+      <div class="col-sm-9">
+        <div class="chart-wrapper">
+          <div class="chart-title">
+          Astronomy and AstroPhysics
+          </div>
+      <!--    <div class="chart-stage">
+              <img data-src="holder.js/100%x120/white">
+          </div>  -->
+          <div class="chart-notes">
+           The Department of Physics was established in the year 1933 by Prof. Sir C.V. Raman. It soon evolved into an advanced centre for research with outstanding work in optics and spectroscopy.
+
+Several illustrious names of Indian Science such as Homi Bhabha, Vikram Sarabhai, R.S.Krishnan, G.N.Ramachandran and S.Ramaseshan have been associated with this department.
+
+The department has continued this tradition of excellence and has now become an internationally recognised centre for research in condensed matter physics and physics of biomolecules. The department also co-ordinates an interinstitutional programme in Astronomy and Astrophysics.
+
+Many of the faculty members have received national and international recognition and several occupy high positions in national scientific institutions.
+<br><br><br><br><br> <br> <br> <br> <br>
+			  <p align="right">
+			  Yellow line represents papers <br> <br>
+			  Blue line represents patents  <br> <br>
+			  Red line represents projects <br> <br>
+			  </p>
+			  <br><br><br>
+		  </div>
+        </div>
+      </div>
+    </div>
+
+
+    <hr>
+
+    <p class="small text-muted">Built with &#9829; by <a href="https://keen.io">Keen IO</a></p>
+
+  </div>
+
+  <script type="text/javascript"src="./assets/lib/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript"src="./assets/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript"src="./assets/lib/holderjs/holder.js"></script>
+  <script>
+    Holder.add_theme("white", { background:"#fff", foreground:"#a7a7a7", size:10 });
+  </script>
+
+  <script type="text/javascript"src="./assets/lib/keen-js/dist/keen.min.js"></script>
+  <script type="text/javascript"src="./assets/js/meta.js"></script>
+  <script src="radarChart.js"></script> 
+    <script>
+      ////////////////////////////////////////////////////////////// 
+      //////////////////////// Set-Up ////////////////////////////// 
+      ////////////////////////////////////////////////////////////// 
+
+      var margin = {top: 50, right: 50, bottom: 150, left: 0},
+        // width = Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
+        // height = Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
+        width=307;
+        height=207;
+          
+      ////////////////////////////////////////////////////////////// 
+      ////////////////////////// Data ////////////////////////////// 
+      ////////////////////////////////////////////////////////////// 
+      var data1 = [[{"College ":"IISC","Division":"Biological Sciences","axis":"Biochemistry","value":51,"Patents":5,"Projects":11},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Centre for Ecological Sciences","value":57,"Patents":16,"Projects":7},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Centre for Neuroscience","value":63,"Patents":11,"Projects":10},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Microbiology & Cell Biology","value":69,"Patents":9,"Projects":8},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Molecular Biophysics Unit","value":48,"Patents":7,"Projects":7},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Molecular Reproduction, Development & Genetics","value":64,"Patents":5,"Projects":7},
+],
+[{"College ":"IISC","Division":"Biological Sciences","axis":"Biochemistry","Papers":51,"value":5,"Projects":11},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Centre for Ecological Sciences","Papers":57,"value":16,"Projects":7},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Centre for Neuroscience","Papers":63,"value":11,"Projects":10},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Microbiology & Cell Biology","Papers":69,"value":9,"Projects":8},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Molecular Biophysics Unit","Papers":48,"value":7,"Projects":7},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Molecular Reproduction, Development & Genetics","Papers":64,"value":5,"Projects":7},
+],
+[{"College ":"IISC","Division":"Biological Sciences","axis":"Biochemistry","Papers":51,"Patents":5,"value":11},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Centre for Ecological Sciences","Papers":57,"Patents":16,"value":7},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Centre for Neuroscience","Papers":63,"Patents":11,"value":10},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Microbiology & Cell Biology","Papers":69,"Patents":9,"value":8},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Molecular Biophysics Unit","Papers":48,"Patents":7,"value":7},
+{"College ":"IISC","Division":"Biological Sciences","axis":"Molecular Reproduction, Development & Genetics","Papers":64,"Patents":5,"value":7},
+]];
+var data2=[[{"College ":"IISC","Division":"Chemical Sciences","axis":"Inorganic & Physical Chemistry","value":80,"Patents":6,"Projects":6},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"Materials Research Centre","value":50,"Patents":10,"Projects":10},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"NMR Research Centre","value":112,"Patents":8,"Projects":8},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"Organic Chemistry","value":43,"Patents":12,"Projects":12},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"Solid State & Structural Chemistry Unit","value":48,"Patents":11,"Projects":12},
+          ],
+          [{"College ":"IISC","Division":"Chemical Sciences","axis":"Inorganic & Physical Chemistry","Papers":80,"value":6,"Projects":6},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"Materials Research Centre","Papers":50,"value":10,"Projects":10},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"NMR Research Centre","Papers":112,"value":8,"Projects":8},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"Organic Chemistry","Papers":43,"value":12,"Projects":12},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"Solid State & Structural Chemistry Unit","Papers":48,"value":11,"Projects":12},
+          ],
+          [{"College ":"IISC","Division":"Chemical Sciences","axis":"Inorganic & Physical Chemistry","Papers":80,"Patents":6,"value":6},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"Materials Research Centre","Papers":50,"Patents":10,"value":10},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"NMR Research Centre","Papers":112,"Patents":8,"value":8},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"Organic Chemistry","Papers":43,"Patents":12,"value":12},
+          {"College ":"IISC","Division":"Chemical Sciences","axis":"Solid State & Structural Chemistry Unit","Papers":48,"Patents":11,"value":12},
+          ]];
+        var data3=[[{"College ":"IISC","Division":"Mechanical Sciences","axis":"Aerospace Engineering","value":53,"Patents":9,"Projects":13},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Product Design & Manufacturing","value":58,"Patents":9,"Projects":10},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Chemical Engineering","value":63,"Patents":9,"Projects":15},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Materials Engineering","value":68,"Patents":9,"Projects":8},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Advaced Facility for Microscopy and Microanalysis(AFMM)","value":73,"Patents":10,"Projects":12},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Mechanical Engineering","value":0,"Patents":10,"Projects":11},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Civil Engineering","value":68,"Patents":10,"Projects":13},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Earth Sciences (CEaS)","value":73,"Patents":10,"Projects":14},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Atmospheric & Oceanic Sciences","value":48,"Patents":10,"Projects":16},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Sustainable Technologies (formerly known as ASTRA)","value":54,"Patents":10,"Projects":13},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Divecha Centre for Climate Change","value":66,"Patents":10,"Projects":13},
+],
+[{"College ":"IISC","Division":"Mechanical Sciences","axis":"Aerospace Engineering","Papers":53,"value":9,"Projects":13},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Product Design & Manufacturing","Papers":58,"value":9,"Projects":10},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Chemical Engineering","Papers":63,"value":9,"Projects":15},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Materials Engineering","Papers":68,"value":9,"Projects":8},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Advaced Facility for Microscopy and Microanalysis(AFMM)","Papers":73,"value":10,"Projects":12},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Mechanical Engineering","Papers":0,"value":10,"Projects":11},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Civil Engineering","Papers":68,"value":10,"Projects":13},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Earth Sciences (CEaS)","Papers":73,"value":10,"Projects":14},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Atmospheric & Oceanic Sciences","Papers":48,"value":10,"Projects":16},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Sustainable Technologies (formerly known as ASTRA)","Papers":54,"value":10,"Projects":13},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Divecha Centre for Climate Change","Papers":66,"value":10,"Projects":13},
+],
+[{"College ":"IISC","Division":"Mechanical Sciences","axis":"Aerospace Engineering","Papers":53,"Patents":9,"value":13},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Product Design & Manufacturing","Papers":58,"Patents":9,"value":10},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Chemical Engineering","Papers":63,"Patents":9,"value":15},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Materials Engineering","Papers":68,"Patents":9,"value":8},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Advaced Facility for Microscopy and Microanalysis(AFMM)","Papers":73,"Patents":10,"value":12},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Mechanical Engineering","Papers":0,"Patents":10,"value":11},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Civil Engineering","Papers":68,"Patents":10,"value":13},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Earth Sciences (CEaS)","Papers":73,"Patents":10,"value":14},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Atmospheric & Oceanic Sciences","Papers":48,"Patents":10,"value":16},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Centre for Sustainable Technologies (formerly known as ASTRA)","Papers":54,"Patents":10,"value":13},
+{"College ":"IISC","Division":"Mechanical Sciences","axis":"Divecha Centre for Climate Change","Papers":66,"Patents":10,"value":13},
+]];
+      var data4=[[{"College ":"IISC","Division":"Centres under the Director","axis":"Archives and Publication Cell","value":67,"Patents":10,"Projects":18},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Centre for Continuing Education","value":67,"Patents":10,"Projects":13},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Center for Counseling and Support","value":68,"Patents":10,"Projects":18},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Centre for Scientific & Industrial Consultancy","value":68,"Patents":10,"Projects":20},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Center for Sponsored Schemes and Projects (CSSP)","value":69,"Patents":11,"Projects":13},
+{"College ":"IISC","Division":"Centres under the Director","axis":"J.R.D.Tata Memorial Library","value":69,"Patents":11,"Projects":13},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Office of Development and Alumni Affairs","value":69,"Patents":11,"Projects":22},
+],
+[{"College ":"IISC","Division":"Centres under the Director","axis":"Archives and Publication Cell","Papers":67,"value":10,"Projects":18},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Centre for Continuing Education","Papers":67,"value":10,"Projects":13},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Center for Counseling and Support","Papers":68,"value":10,"Projects":18},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Centre for Scientific & Industrial Consultancy","Papers":68,"value":10,"Projects":20},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Center for Sponsored Schemes and Projects (CSSP)","Papers":69,"value":11,"Projects":13},
+{"College ":"IISC","Division":"Centres under the Director","axis":"J.R.D.Tata Memorial Library","Papers":69,"value":11,"Projects":13},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Office of Development and Alumni Affairs","Papers":69,"value":11,"Projects":22},
+],
+[{"College ":"IISC","Division":"Centres under the Director","axis":"Archives and Publication Cell","Papers":67,"Patents":10,"value":18},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Centre for Continuing Education","Papers":67,"Patents":10,"value":13},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Center for Counseling and Support","Papers":68,"Patents":10,"value":18},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Centre for Scientific & Industrial Consultancy","Papers":68,"Patents":10,"value":20},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Center for Sponsored Schemes and value (CSSP)","Papers":69,"Patents":11,"value":13},
+{"College ":"IISC","Division":"Centres under the Director","axis":"J.R.D.Tata Memorial Library","Papers":69,"Patents":11,"value":13},
+{"College ":"IISC","Division":"Centres under the Director","axis":"Office of Development and Alumni Affairs","Papers":69,"Patents":11,"value":22},
+]];
+    var data5=[[{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Centre for Nano Science and Engineering (CeNSE)","value":70,"Patents":12,"Projects":24},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Supercomputer Education & Research Centre (SERC)","value":70,"Patents":12,"Projects":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Robert Bosch Centre for Cyber Physical Systems (RBCCPS)","value":71,"Patents":13,"Projects":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"IISc Mathematics Initiative (IMI)","value":71,"Patents":14,"Projects":26},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Interdisciplinary Centre for Energy Research (ICER)","value":71,"Patents":14,"Projects":28},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Interdisciplinary Centre for Water Research (ICWaR)","value":72,"Patents":15,"Projects":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Department of Management Studies","value":72,"Patents":15,"Projects":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Centre for Contemporary Studies (CCS)","value":73,"Patents":16,"Projects":30},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Center for infrastructure, Sustainable Transportation and Urban Planning (CiSTUP)","value":0,"Patents":16,"Projects":32},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Centre for Biosystems Science and Engineering (BSSE)","value":44,"Patents":17,"Projects":13},
+],
+[{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Centre for Nano Science and Engineering (CeNSE)","Papers":70,"value":12,"Projects":24},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Supercomputer Education & Research Centre (SERC)","Papers":70,"value":12,"Projects":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Robert Bosch Centre for Cyber Physical Systems (RBCCPS)","Papers":71,"value":13,"Projects":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"IISc Mathematics Initiative (IMI)","Papers":71,"value":14,"Projects":26},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Interdisciplinary Centre for Energy Research (ICER)","Papers":71,"value":14,"Projects":28},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Interdisciplinary Centre for Water Research (ICWaR)","Papers":72,"value":15,"Projects":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Department of Management Studies","Papers":72,"value":15,"Projects":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Centre for Contemporary Studies (CCS)","Papers":73,"value":16,"Projects":30},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Center for infrastructure, Sustainable Transportation and Urban Planning (CiSTUP)","Papers":0,"value":16,"Projects":32},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Centre for Biosystems Science and Engineering (BSSE)","Papers":44,"value":17,"Projects":13},
+],
+[{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Centre for Nano Science and Engineering (CeNSE)","Papers":70,"Patents":12,"value":24},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Supercomputer Education & Research Centre (SERC)","Papers":70,"Patents":12,"value":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Robert Bosch Centre for Cyber Physical Systems (RBCCPS)","Papers":71,"Patents":13,"value":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"IISc Mathematics Initiative (IMI)","Papers":71,"Patents":14,"value":26},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Interdisciplinary Centre for Energy Research (ICER)","Papers":71,"Patents":14,"value":28},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Interdisciplinary Centre for Water Research (ICWaR)","Papers":72,"Patents":15,"value":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Department of Management Studies","Papers":72,"Patents":15,"value":13},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Centre for Contemporary Studies (CCS)","Papers":73,"Patents":16,"value":30},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Center for infrastructure, Sustainable Transportation and Urban Planning (CiSTUP)","Papers":0,"Patents":16,"value":32},
+{"College ":"IISC","Division":"Interdisciplinary Research","axis":"Centre for Biosystems Science and Engineering (BSSE)","Papers":44,"Patents":17,"value":13},
+]];
+      var data6=[[{"College ":"IISC","Division":"Electrical Sciences","axis":"Department of Electronic Systems Engineering","value":38,"Patents":10,"Projects":13},
+{"College ":"IISC","Division":"Electrical Sciences","axis":"Computer Science & Automation","value":31,"Patents":12,"Projects":22},
+{"College ":"IISC","Division":"Electrical Sciences","axis":"Electrical Communication Engineering","value":48,"Patents":6,"Projects":24},
+{"College ":"IISC","Division":"Electrical Sciences","axis":"Electrical Engineering","value":73,"Patents":8,"Projects":13},
+],
+[{"College ":"IISC","Division":"Electrical Sciences","axis":"Department of Electronic Systems Engineering","Papers":38,"value":10,"Projects":13},
+{"College ":"IISC","Division":"Electrical Sciences","axis":"Computer Science & Automation","Papers":31,"value":12,"Projects":22},
+{"College ":"IISC","Division":"Electrical Sciences","axis":"Electrical Communication Engineering","Papers":48,"value":6,"Projects":24},
+{"College ":"IISC","Division":"Electrical Sciences","axis":"Electrical Engineering","Papers":73,"value":8,"Projects":13},
+],
+[{"College ":"IISC","Division":"Electrical Sciences","axis":"Department of Electronic Systems Engineering","Papers":38,"Patents":10,"value":13},
+{"College ":"IISC","Division":"Electrical Sciences","axis":"Computer Science & Automation","Papers":31,"Patents":12,"value":22},
+{"College ":"IISC","Division":"Electrical Sciences","axis":"Electrical Communication Engineering","Papers":48,"Patents":6,"value":24},
+{"College ":"IISC","Division":"Electrical Sciences","axis":"Electrical Engineering","Papers":73,"Patents":8,"value":13},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Astronomy and Astrophysics Programme","Papers":73,"Patents":13,"value":13},
+]];
+      var data7=[[{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Astronomy and Astrophysics Programme","value":73,"Patents":13,"Projects":13},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Centre for Cryogenic Technology","value":74,"Patents":10,"Projects":26},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Centre for High Energy Physics","value":74,"Patents":10,"Projects":28},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Instrumentation and Applied Physics","value":75,"Patents":16,"Projects":13},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Mathematics","value":75,"Patents":17,"Projects":13},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Physics","value":76,"Patents":20,"Projects":22}],
+[{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Astronomy and Astrophysics Programme","Papers":73,"value":13,"Projects":13},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Centre for Cryogenic Technology","Papers":74,"value":10,"Projects":26},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Centre for High Energy Physics","Papers":74,"value":10,"Projects":28},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Instrumentation and Applied Physics","Papers":75,"value":16,"Projects":13},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Mathematics","Papers":75,"value":17,"Projects":13},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Physics","Papers":76,"value":20,"Projects":22}],
+
+[{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Astronomy and Astrophysics Programme","Papers":73,"Patents":13,"value":13},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Centre for Cryogenic Technology","Papers":74,"Patents":10,"value":26},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Centre for High Energy Physics","Papers":74,"Patents":10,"value":28},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Instrumentation and Applied Physics","Papers":75,"Patents":16,"value":13},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Mathematics","Papers":75,"Patents":17,"value":13},
+{"College ":"IISC","Division":"Physical & Mathematical Sciences","axis":"Physics","Papers":76,"Patents":20,"value":22}]];
+
+            var color = d3.scale.ordinal()
+        .range(["#EDC951","#CC333F","#00A0B0"]);
+        
+      var radarChartOptions = {
+        w: width,
+        h: height,
+        margin: margin,
+        maxValue: 0.5,
+        levels: 5,
+        roundStrokes: true,
+        color: color
+      };
+      //Call function to draw the Radar chart
+      RadarChart(".r1", data1, radarChartOptions);
+      RadarChart(".r2", data2, radarChartOptions);
+      RadarChart(".r3", data3, radarChartOptions);
+      RadarChart(".r4", data4, radarChartOptions);
+      RadarChart(".r5", data5, radarChartOptions);
+      RadarChart(".r6", data6, radarChartOptions);
+      RadarChart(".r7", data7, radarChartOptions);
+      </script>
+
+</body>
+</html>
